@@ -16,6 +16,25 @@
                 <Value2>@ThisDate</Value2>
             </FilterExp>
         </Filters>
+        <MailSettings>
+            <ActivitySource>
+            </ActivitySource>
+            <Bcc>
+            </Bcc>
+            <Body>
+            </Body>
+            <Cc>
+            </Cc>
+            <Format>
+            </Format>
+            <ParentSource>
+            </ParentSource>
+            <Subject>
+            </Subject>
+            <TemplateID>
+            </TemplateID>
+            <To>=[BAccount.TOEMAIL_Attributes]</To>
+        </MailSettings>
         <PageSettings>
             <Landscape>True</Landscape>
         </PageSettings>
@@ -142,6 +161,17 @@
                     </Padding>
                 </Style>
             </StyleRule>
+            <StyleRule>
+                <Name>Title</Name>
+                <Style>
+                    <Font>
+                        <Name>Microsoft YaHei UI</Name>
+                        <Size>24px</Size>
+                    </Font>
+                    <TextAlign>Center</TextAlign>
+                    <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+            </StyleRule>
         </StyleSheet>
         <Tables>
             <ReportTable Name="Address">
@@ -259,230 +289,6 @@
                     </ReportField>
                 </Fields>
                 <FullName>PX.Objects.CR.Address</FullName>
-            </ReportTable>
-            <ReportTable Name="BAccount">
-                <Fields>
-                    <ReportField Name="AcctCD">
-                    </ReportField>
-                    <ReportField Name="AcctCD_Segment1">
-                    </ReportField>
-                    <ReportField Name="AcctName">
-                    </ReportField>
-                    <ReportField Name="AcctReferenceNbr">
-                    </ReportField>
-                    <ReportField Name="AllowOverrideCury">
-                        <DataType>Boolean</DataType>
-                    </ReportField>
-                    <ReportField Name="AllowOverrideRate">
-                        <DataType>Boolean</DataType>
-                    </ReportField>
-                    <ReportField Name="BAccountID">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="BaseCuryID">
-                    </ReportField>
-                    <ReportField Name="CampaignSourceID">
-                    </ReportField>
-                    <ReportField Name="CampaignSourceID_CRCampaign_campaignName">
-                    </ReportField>
-                    <ReportField Name="CampaignSourceID_description">
-                    </ReportField>
-                    <ReportField Name="CasesCount">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="ClassID">
-                    </ReportField>
-                    <ReportField Name="ClassID_CRCustomerClass_description">
-                    </ReportField>
-                    <ReportField Name="ClassID_description">
-                    </ReportField>
-                    <ReportField Name="ConsolidateToParent">
-                        <DataType>Boolean</DataType>
-                    </ReportField>
-                    <ReportField Name="ConsolidatingBAccountID">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="COrgBAccountID">
-                    </ReportField>
-                    <ReportField Name="COrgBAccountID_BranchItem_acctName">
-                    </ReportField>
-                    <ReportField Name="COrgBAccountID_description">
-                    </ReportField>
-                    <ReportField Name="Count">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="CreatedByID">
-                    </ReportField>
-                    <ReportField Name="CreatedByID_Creator_displayName">
-                    </ReportField>
-                    <ReportField Name="CreatedByID_Creator_Username">
-                    </ReportField>
-                    <ReportField Name="CreatedByID_description">
-                    </ReportField>
-                    <ReportField Name="CreatedByScreenID">
-                    </ReportField>
-                    <ReportField Name="CreatedDateTime">
-                        <DataType>DateTime</DataType>
-                    </ReportField>
-                    <ReportField Name="CreatedDateTime_Day">
-                    </ReportField>
-                    <ReportField Name="CreatedDateTime_Hour">
-                    </ReportField>
-                    <ReportField Name="CreatedDateTime_Month">
-                    </ReportField>
-                    <ReportField Name="CreatedDateTime_Quarter">
-                    </ReportField>
-                    <ReportField Name="CuryID">
-                    </ReportField>
-                    <ReportField Name="CuryRateTypeID">
-                    </ReportField>
-                    <ReportField Name="DefAddressID">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="DefAddressID_Address_displayName">
-                    </ReportField>
-                    <ReportField Name="DefAddressID_description">
-                    </ReportField>
-                    <ReportField Name="DefContactID">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="DefLocationID">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="DefLocationID_description">
-                    </ReportField>
-                    <ReportField Name="DefLocationID_Location_locationCD">
-                    </ReportField>
-                    <ReportField Name="EntityTypeID">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="GroupMask">
-                        <DataType>Object</DataType>
-                    </ReportField>
-                    <ReportField Name="HSEntityTypeID">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="IsBranch">
-                        <DataType>Boolean</DataType>
-                    </ReportField>
-                    <ReportField Name="IsCustomerOrCombined">
-                        <DataType>Boolean</DataType>
-                    </ReportField>
-                    <ReportField Name="LastActivity">
-                        <DataType>DateTime</DataType>
-                    </ReportField>
-                    <ReportField Name="LastModifiedByID">
-                    </ReportField>
-                    <ReportField Name="LastModifiedByID_description">
-                    </ReportField>
-                    <ReportField Name="LastModifiedByID_Modifier_displayName">
-                    </ReportField>
-                    <ReportField Name="LastModifiedByID_Modifier_Username">
-                    </ReportField>
-                    <ReportField Name="LastModifiedByScreenID">
-                    </ReportField>
-                    <ReportField Name="LastModifiedDateTime">
-                        <DataType>DateTime</DataType>
-                    </ReportField>
-                    <ReportField Name="LastModifiedDateTime_Day">
-                    </ReportField>
-                    <ReportField Name="LastModifiedDateTime_Hour">
-                    </ReportField>
-                    <ReportField Name="LastModifiedDateTime_Month">
-                    </ReportField>
-                    <ReportField Name="LastModifiedDateTime_Quarter">
-                    </ReportField>
-                    <ReportField Name="LegalName">
-                    </ReportField>
-                    <ReportField Name="NoteActivity">
-                    </ReportField>
-                    <ReportField Name="NoteFiles">
-                    </ReportField>
-                    <ReportField Name="NoteID">
-                        <DataType>Object</DataType>
-                    </ReportField>
-                    <ReportField Name="NoteImages">
-                    </ReportField>
-                    <ReportField Name="NotePopupText">
-                    </ReportField>
-                    <ReportField Name="NoteText">
-                    </ReportField>
-                    <ReportField Name="OwnerID">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="OwnerID_description">
-                    </ReportField>
-                    <ReportField Name="OwnerID_Owner_displayName">
-                    </ReportField>
-                    <ReportField Name="ParentBAccountID">
-                    </ReportField>
-                    <ReportField Name="ParentBAccountID_BAccountR_acctName">
-                    </ReportField>
-                    <ReportField Name="ParentBAccountID_description">
-                    </ReportField>
-                    <ReportField Name="ParentBAccountID_Segment1">
-                    </ReportField>
-                    <ReportField Name="PreviewHtml">
-                    </ReportField>
-                    <ReportField Name="PrimaryContactID">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="PseudonymizationStatus">
-                        <DataType>Int32</DataType>
-                    </ReportField>
-                    <ReportField Name="Secured">
-                        <DataType>Boolean</DataType>
-                    </ReportField>
-                    <ReportField Name="Selected">
-                        <DataType>Boolean</DataType>
-                    </ReportField>
-                    <ReportField Name="Status">
-                    </ReportField>
-                    <ReportField Name="TaxRegistrationID">
-                    </ReportField>
-                    <ReportField Name="TaxZoneID">
-                    </ReportField>
-                    <ReportField Name="TaxZoneID_description">
-                    </ReportField>
-                    <ReportField Name="TaxZoneID_TaxZone_descr">
-                    </ReportField>
-                    <ReportField Name="tstamp">
-                    </ReportField>
-                    <ReportField Name="Type">
-                    </ReportField>
-                    <ReportField Name="UsrAddressLine">
-                    </ReportField>
-                    <ReportField Name="UsrAESKey">
-                    </ReportField>
-                    <ReportField Name="UsrCompanyName">
-                    </ReportField>
-                    <ReportField Name="UsrOurTaxNbr">
-                    </ReportField>
-                    <ReportField Name="UsrTaxRegistrationID">
-                    </ReportField>
-                    <ReportField Name="UsrWHTTaxAuthority">
-                    </ReportField>
-                    <ReportField Name="UsrZeroTaxTaxCntry">
-                    </ReportField>
-                    <ReportField Name="ViewInCrm">
-                        <DataType>Boolean</DataType>
-                    </ReportField>
-                    <ReportField Name="VOrgBAccountID">
-                    </ReportField>
-                    <ReportField Name="VOrgBAccountID_BranchItem_acctName">
-                    </ReportField>
-                    <ReportField Name="VOrgBAccountID_description">
-                    </ReportField>
-                    <ReportField Name="VStatus">
-                    </ReportField>
-                    <ReportField Name="WorkgroupID">
-                    </ReportField>
-                    <ReportField Name="WorkgroupID_description">
-                    </ReportField>
-                    <ReportField Name="WorkgroupID_EPCompanyTree_description">
-                    </ReportField>
-                </Fields>
-                <FullName>PX.Objects.CR.BAccount</FullName>
             </ReportTable>
             <ReportTable Name="Contact">
                 <Fields>
@@ -1112,294 +918,225 @@
                 </Fields>
                 <FullName>PX.Objects.CR.CRCase</FullName>
             </ReportTable>
+            <ReportTable Name="BAccount">
+                <Fields>
+                    <ReportField Name="AcctCD">
+                    </ReportField>
+                    <ReportField Name="AcctCD_Segment1">
+                    </ReportField>
+                    <ReportField Name="AcctName">
+                    </ReportField>
+                    <ReportField Name="AcctReferenceNbr">
+                    </ReportField>
+                    <ReportField Name="AllowOverrideCury">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="AllowOverrideRate">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="BAccountID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="BaseCuryID">
+                    </ReportField>
+                    <ReportField Name="CampaignSourceID">
+                    </ReportField>
+                    <ReportField Name="CampaignSourceID_CRCampaign_campaignName">
+                    </ReportField>
+                    <ReportField Name="CampaignSourceID_description">
+                    </ReportField>
+                    <ReportField Name="CasesCount">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="ClassID">
+                    </ReportField>
+                    <ReportField Name="ClassID_CRCustomerClass_description">
+                    </ReportField>
+                    <ReportField Name="ClassID_description">
+                    </ReportField>
+                    <ReportField Name="ConsolidateToParent">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="ConsolidatingBAccountID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="COrgBAccountID">
+                    </ReportField>
+                    <ReportField Name="COrgBAccountID_BranchItem_acctName">
+                    </ReportField>
+                    <ReportField Name="COrgBAccountID_description">
+                    </ReportField>
+                    <ReportField Name="Count">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="CreatedByID">
+                    </ReportField>
+                    <ReportField Name="CreatedByID_Creator_displayName">
+                    </ReportField>
+                    <ReportField Name="CreatedByID_Creator_Username">
+                    </ReportField>
+                    <ReportField Name="CreatedByID_description">
+                    </ReportField>
+                    <ReportField Name="CreatedByScreenID">
+                    </ReportField>
+                    <ReportField Name="CreatedDateTime">
+                        <DataType>DateTime</DataType>
+                    </ReportField>
+                    <ReportField Name="CreatedDateTime_Day">
+                    </ReportField>
+                    <ReportField Name="CreatedDateTime_Hour">
+                    </ReportField>
+                    <ReportField Name="CreatedDateTime_Month">
+                    </ReportField>
+                    <ReportField Name="CreatedDateTime_Quarter">
+                    </ReportField>
+                    <ReportField Name="CuryID">
+                    </ReportField>
+                    <ReportField Name="CuryRateTypeID">
+                    </ReportField>
+                    <ReportField Name="DefAddressID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="DefAddressID_Address_displayName">
+                    </ReportField>
+                    <ReportField Name="DefAddressID_description">
+                    </ReportField>
+                    <ReportField Name="DefContactID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="DefLocationID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="DefLocationID_description">
+                    </ReportField>
+                    <ReportField Name="DefLocationID_Location_locationCD">
+                    </ReportField>
+                    <ReportField Name="EntityTypeID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="GroupMask">
+                        <DataType>Object</DataType>
+                    </ReportField>
+                    <ReportField Name="HSEntityTypeID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="IsBranch">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="IsCustomerOrCombined">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="LastActivity">
+                        <DataType>DateTime</DataType>
+                    </ReportField>
+                    <ReportField Name="LastModifiedByID">
+                    </ReportField>
+                    <ReportField Name="LastModifiedByID_description">
+                    </ReportField>
+                    <ReportField Name="LastModifiedByID_Modifier_displayName">
+                    </ReportField>
+                    <ReportField Name="LastModifiedByID_Modifier_Username">
+                    </ReportField>
+                    <ReportField Name="LastModifiedByScreenID">
+                    </ReportField>
+                    <ReportField Name="LastModifiedDateTime">
+                        <DataType>DateTime</DataType>
+                    </ReportField>
+                    <ReportField Name="LastModifiedDateTime_Day">
+                    </ReportField>
+                    <ReportField Name="LastModifiedDateTime_Hour">
+                    </ReportField>
+                    <ReportField Name="LastModifiedDateTime_Month">
+                    </ReportField>
+                    <ReportField Name="LastModifiedDateTime_Quarter">
+                    </ReportField>
+                    <ReportField Name="LegalName">
+                    </ReportField>
+                    <ReportField Name="NoteActivity">
+                    </ReportField>
+                    <ReportField Name="NoteFiles">
+                    </ReportField>
+                    <ReportField Name="NoteID">
+                        <DataType>Object</DataType>
+                    </ReportField>
+                    <ReportField Name="NoteImages">
+                    </ReportField>
+                    <ReportField Name="NotePopupText">
+                    </ReportField>
+                    <ReportField Name="NoteText">
+                    </ReportField>
+                    <ReportField Name="OwnerID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="OwnerID_description">
+                    </ReportField>
+                    <ReportField Name="OwnerID_Owner_displayName">
+                    </ReportField>
+                    <ReportField Name="ParentBAccountID">
+                    </ReportField>
+                    <ReportField Name="ParentBAccountID_BAccountR_acctName">
+                    </ReportField>
+                    <ReportField Name="ParentBAccountID_description">
+                    </ReportField>
+                    <ReportField Name="ParentBAccountID_Segment1">
+                    </ReportField>
+                    <ReportField Name="PRDURL_Attributes">
+                    </ReportField>
+                    <ReportField Name="PreviewHtml">
+                    </ReportField>
+                    <ReportField Name="PrimaryContactID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="PseudonymizationStatus">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="Secured">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="Selected">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="Status">
+                    </ReportField>
+                    <ReportField Name="TaxRegistrationID">
+                    </ReportField>
+                    <ReportField Name="TaxZoneID">
+                    </ReportField>
+                    <ReportField Name="TaxZoneID_description">
+                    </ReportField>
+                    <ReportField Name="TaxZoneID_TaxZone_descr">
+                    </ReportField>
+                    <ReportField Name="TOEMAIL_Attributes">
+                    </ReportField>
+                    <ReportField Name="tstamp">
+                    </ReportField>
+                    <ReportField Name="Type">
+                    </ReportField>
+                    <ReportField Name="UATURL_Attributes">
+                    </ReportField>
+                    <ReportField Name="ViewInCrm">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="VOrgBAccountID">
+                    </ReportField>
+                    <ReportField Name="VOrgBAccountID_BranchItem_acctName">
+                    </ReportField>
+                    <ReportField Name="VOrgBAccountID_description">
+                    </ReportField>
+                    <ReportField Name="VStatus">
+                    </ReportField>
+                    <ReportField Name="WorkgroupID">
+                    </ReportField>
+                    <ReportField Name="WorkgroupID_description">
+                    </ReportField>
+                    <ReportField Name="WorkgroupID_EPCompanyTree_description">
+                    </ReportField>
+                </Fields>
+                <FullName>PX.Objects.CR.BAccount</FullName>
+            </ReportTable>
         </Tables>
+        <Version>20211215</Version>
         <Sections>
-            <PageHeader Name="pageHeaderSection1">
-                <Height>4.2328cm</Height>
-                <Style>
-                    <BorderColor>
-                        <Bottom>Gray</Bottom>
-                    </BorderColor>
-                    <BorderStyle>
-                        <Bottom>Solid</Bottom>
-                    </BorderStyle>
-                    <BorderWidth>
-                        <Bottom>2px</Bottom>
-                    </BorderWidth>
-                </Style>
-                <Items>
-                    <TextBox Name="textBox1">
-                        <Format>#,#0</Format>
-                        <Location>24px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$CaseByThisWeek</Value>
-                        <VisibleExpr>=$CaseByThisWeek=0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox10">
-                        <Location>696px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HTitle</StyleName>
-                        <Value>未結案數</Value>
-                        <VisibleExpr>=$OpenCaseCount=0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox11">
-                        <Format>#,#0</Format>
-                        <Location>864px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$CaseCount</Value>
-                        <VisibleExpr>=$CaseCount=0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox12">
-                        <Location>864px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HTitle</StyleName>
-                        <Value>案例總計</Value>
-                        <VisibleExpr>=$CaseCount=0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox13">
-                        <Location>8px, 140px</Location>
-                        <Size>72px, 16px</Size>
-                        <StyleName>HColumn</StyleName>
-                        <Value>Case ID</Value>
-                    </TextBox>
-                    <TextBox Name="textBox14">
-                        <Location>84px, 140px</Location>
-                        <Size>480px, 16px</Size>
-                        <StyleName>HColumn</StyleName>
-                        <Value>Subject</Value>
-                    </TextBox>
-                    <TextBox Name="textBox15">
-                        <Location>568px, 140px</Location>
-                        <Size>56px, 16px</Size>
-                        <StyleName>HColumn</StyleName>
-                        <Value>Status</Value>
-                    </TextBox>
-                    <TextBox Name="textBox16">
-                        <Format>#,#0</Format>
-                        <Location>696px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>232, 62, 140</BackColor>
-                        </Style>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$OpenCaseCount</Value>
-                        <VisibleExpr>=$OpenCaseCount&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox17">
-                        <Location>528px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>242, 197, 65</BackColor>
-                        </Style>
-                        <StyleName>HTitle</StyleName>
-                        <Value>本月結案數</Value>
-                        <VisibleExpr>=$CloseByThisMonth&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox18">
-                        <Format>#,#0</Format>
-                        <Location>528px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>242, 197, 65</BackColor>
-                        </Style>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$CloseByThisMonth</Value>
-                        <VisibleExpr>=$CloseByThisMonth&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox19">
-                        <Location>624px, 140px</Location>
-                        <Size>136px, 16px</Size>
-                        <StyleName>HColumn</StyleName>
-                        <Value>Date Reported</Value>
-                    </TextBox>
-                    <TextBox Name="textBox2">
-                        <Location>24px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HTitle</StyleName>
-                        <Value>本週新增案例</Value>
-                        <VisibleExpr>=$CaseByThisWeek=0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox20">
-                        <Location>760px, 140px</Location>
-                        <Size>88px, 16px</Size>
-                        <StyleName>HColumn</StyleName>
-                        <Value>Owner</Value>
-                    </TextBox>
-                    <TextBox Name="textBox21">
-                        <Location>848px, 140px</Location>
-                        <Size>64px, 16px</Size>
-                        <StyleName>HColumn</StyleName>
-                        <Value>Country</Value>
-                    </TextBox>
-                    <TextBox Name="textBox22">
-                        <Location>912px, 140px</Location>
-                        <Size>112px, 16px</Size>
-                        <StyleName>HColumn</StyleName>
-                        <Value>Contact Name</Value>
-                    </TextBox>
-                    <TextBox Name="textBox26">
-                        <Location>360px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>242, 197, 65</BackColor>
-                        </Style>
-                        <StyleName>HTitle</StyleName>
-                        <Value>本週結案數</Value>
-                        <VisibleExpr>=$CloseByThisWeek&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox27">
-                        <Format>#,#0</Format>
-                        <Location>360px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>242, 197, 65</BackColor>
-                        </Style>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$CloseByThisWeek</Value>
-                        <VisibleExpr>=$CloseByThisWeek&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox28">
-                        <Location>192px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>242, 197, 65</BackColor>
-                        </Style>
-                        <StyleName>HTitle</StyleName>
-                        <Value>本月新增案例</Value>
-                        <VisibleExpr>=$CaseByThisMonth&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox3">
-                        <Format>#,#0</Format>
-                        <Location>192px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$CaseByThisMonth</Value>
-                        <VisibleExpr>=$CaseByThisMonth=0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox33">
-                        <Format>#,#0</Format>
-                        <Location>192px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>242, 197, 65</BackColor>
-                        </Style>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$CaseByThisMonth</Value>
-                        <VisibleExpr>=$CaseByThisMonth&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox34">
-                        <Location>24px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>242, 197, 65</BackColor>
-                        </Style>
-                        <StyleName>HTitle</StyleName>
-                        <Value>本週新增案例</Value>
-                        <VisibleExpr>=$CaseByThisWeek&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox35">
-                        <Location>864px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>232, 62, 140</BackColor>
-                        </Style>
-                        <StyleName>HTitle</StyleName>
-                        <Value>案例總計</Value>
-                        <VisibleExpr>=$CaseCount&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox36">
-                        <Format>#,#0</Format>
-                        <Location>864px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>232, 62, 140</BackColor>
-                        </Style>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$CaseCount</Value>
-                        <VisibleExpr>=$CaseCount&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox37">
-                        <Location>696px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>232, 62, 140</BackColor>
-                        </Style>
-                        <StyleName>HTitle</StyleName>
-                        <Value>未結案數</Value>
-                        <VisibleExpr>=$OpenCaseCount&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox38">
-                        <Format>#,#0</Format>
-                        <Location>24px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <Style>
-                            <BackColor>242, 197, 65</BackColor>
-                        </Style>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$CaseByThisWeek</Value>
-                        <VisibleExpr>=$CaseByThisWeek&gt;0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox39">
-                        <Location>8px, 112px</Location>
-                        <Size>264px, 24px</Size>
-                        <Style>
-                            <Font>
-                                <Name>Microsoft YaHei UI</Name>
-                                <Size>12px</Size>
-                                <Style>Bold</Style>
-                            </Font>
-                        </Style>
-                        <Value>SUPPORT CASES LIST - Last 3 Months</Value>
-                    </TextBox>
-                    <TextBox Name="textBox4">
-                        <Location>192px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HTitle</StyleName>
-                        <Value>本月新增案例</Value>
-                        <VisibleExpr>=$CaseByThisMonth=0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox5">
-                        <Format>#,#0</Format>
-                        <Location>360px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$CloseByThisWeek</Value>
-                        <VisibleExpr>=$CloseByThisWeek=0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox6">
-                        <Location>360px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HTitle</StyleName>
-                        <Value>本週結案數</Value>
-                        <VisibleExpr>=$CloseByThisWeek=0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox7">
-                        <Format>#,#0</Format>
-                        <Location>528px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$CloseByThisMonth</Value>
-                        <VisibleExpr>=$CloseByThisMonth=0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox8">
-                        <Location>528px, 40px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HTitle</StyleName>
-                        <Value>本月結案數</Value>
-                        <VisibleExpr>=$CloseByThisMonth=0</VisibleExpr>
-                    </TextBox>
-                    <TextBox Name="textBox9">
-                        <Format>#,#0</Format>
-                        <Location>696px, 0px</Location>
-                        <Size>144px, 40px</Size>
-                        <StyleName>HCount</StyleName>
-                        <Value>=$OpenCaseCount</Value>
-                        <VisibleExpr>=$OpenCaseCount=0</VisibleExpr>
-                    </TextBox>
-                </Items>
-            </PageHeader>
             <Detail Name="detailSection1">
                 <Height>0.63492cm</Height>
                 <Style>
@@ -1485,6 +1222,361 @@
                     </TextBox>
                 </Items>
             </Detail>
+            <ReportHeader Name="reportHeaderSection1">
+                <Height>1.90476cm</Height>
+                <Items>
+                    <TextBox Name="textBox41">
+                        <Location>320px, 0px</Location>
+                        <Size>392px, 32px</Size>
+                        <StyleName>Title</StyleName>
+                        <Value>=[BAccount.AcctName]</Value>
+                    </TextBox>
+                    <TextBox Name="textBox42">
+                        <Location>320px, 32px</Location>
+                        <Size>392px, 32px</Size>
+                        <StyleName>Title</StyleName>
+                        <Value>Weekly Support Cases Summary</Value>
+                    </TextBox>
+                </Items>
+            </ReportHeader>
+            <PageHeader Name="pageHeaderSection1">
+                <Height>0.42328cm</Height>
+                <Items>
+                    <TextBox Name="textBox40">
+                        <Location>920px, 0px</Location>
+                        <Size>104px, 16px</Size>
+                        <Style>
+                            <TextAlign>Right</TextAlign>
+                        </Style>
+                        <Value>=[PageOf]</Value>
+                    </TextBox>
+                </Items>
+            </PageHeader>
         </Sections>
+        <Items />
+        <Groups>
+            <Group Name="group1">
+                <Headers>
+                    <Header Name="groupHeaderSection1">
+                        <Height>3.59788cm</Height>
+                        <PrintOnEveryPage>True</PrintOnEveryPage>
+                        <ProcessOrder>Always</ProcessOrder>
+                        <Style>
+                            <BorderColor>
+                                <Bottom>Gray</Bottom>
+                            </BorderColor>
+                            <BorderStyle>
+                                <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <BorderWidth>
+                                <Bottom>2px</Bottom>
+                            </BorderWidth>
+                        </Style>
+                        <Items>
+                            <TextBox Name="textBox1">
+                                <Format>#,#0</Format>
+                                <Location>24px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$CaseByThisWeek</Value>
+                                <VisibleExpr>=$CaseByThisWeek=0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox10">
+                                <Location>696px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HTitle</StyleName>
+                                <Value>未結案數</Value>
+                                <VisibleExpr>=$OpenCaseCount=0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox11">
+                                <Format>#,#0</Format>
+                                <Location>864px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$CaseCount</Value>
+                                <VisibleExpr>=$CaseCount=0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox12">
+                                <Location>864px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HTitle</StyleName>
+                                <Value>案例總計</Value>
+                                <VisibleExpr>=$CaseCount=0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox13">
+                                <Location>8px, 120px</Location>
+                                <Size>72px, 16px</Size>
+                                <StyleName>HColumn</StyleName>
+                                <Value>Case ID</Value>
+                            </TextBox>
+                            <TextBox Name="textBox14">
+                                <Location>84px, 120px</Location>
+                                <Size>480px, 16px</Size>
+                                <StyleName>HColumn</StyleName>
+                                <Value>Subject</Value>
+                            </TextBox>
+                            <TextBox Name="textBox15">
+                                <Location>568px, 120px</Location>
+                                <Size>56px, 16px</Size>
+                                <StyleName>HColumn</StyleName>
+                                <Value>Status</Value>
+                            </TextBox>
+                            <TextBox Name="textBox16">
+                                <Format>#,#0</Format>
+                                <Location>696px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>232, 62, 140</BackColor>
+                                </Style>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$OpenCaseCount</Value>
+                                <VisibleExpr>=$OpenCaseCount&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox17">
+                                <Location>528px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>242, 197, 65</BackColor>
+                                </Style>
+                                <StyleName>HTitle</StyleName>
+                                <Value>本月結案數</Value>
+                                <VisibleExpr>=$CloseByThisMonth&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox18">
+                                <Format>#,#0</Format>
+                                <Location>528px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>242, 197, 65</BackColor>
+                                </Style>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$CloseByThisMonth</Value>
+                                <VisibleExpr>=$CloseByThisMonth&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox19">
+                                <Location>624px, 120px</Location>
+                                <Size>136px, 16px</Size>
+                                <StyleName>HColumn</StyleName>
+                                <Value>Date Reported</Value>
+                            </TextBox>
+                            <TextBox Name="textBox2">
+                                <Location>24px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HTitle</StyleName>
+                                <Value>本週新增案例</Value>
+                                <VisibleExpr>=$CaseByThisWeek=0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox20">
+                                <Location>760px, 120px</Location>
+                                <Size>88px, 16px</Size>
+                                <StyleName>HColumn</StyleName>
+                                <Value>Owner</Value>
+                            </TextBox>
+                            <TextBox Name="textBox21">
+                                <Location>848px, 120px</Location>
+                                <Size>64px, 16px</Size>
+                                <StyleName>HColumn</StyleName>
+                                <Value>Country</Value>
+                            </TextBox>
+                            <TextBox Name="textBox22">
+                                <Location>912px, 120px</Location>
+                                <Size>112px, 16px</Size>
+                                <StyleName>HColumn</StyleName>
+                                <Value>Contact Name</Value>
+                            </TextBox>
+                            <TextBox Name="textBox26">
+                                <Location>360px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>242, 197, 65</BackColor>
+                                </Style>
+                                <StyleName>HTitle</StyleName>
+                                <Value>本週結案數</Value>
+                                <VisibleExpr>=$CloseByThisWeek&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox27">
+                                <Format>#,#0</Format>
+                                <Location>360px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>242, 197, 65</BackColor>
+                                </Style>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$CloseByThisWeek</Value>
+                                <VisibleExpr>=$CloseByThisWeek&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox28">
+                                <Location>192px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>242, 197, 65</BackColor>
+                                </Style>
+                                <StyleName>HTitle</StyleName>
+                                <Value>本月新增案例</Value>
+                                <VisibleExpr>=$CaseByThisMonth&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox3">
+                                <Format>#,#0</Format>
+                                <Location>192px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$CaseByThisMonth</Value>
+                                <VisibleExpr>=$CaseByThisMonth=0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox33">
+                                <Format>#,#0</Format>
+                                <Location>192px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>242, 197, 65</BackColor>
+                                </Style>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$CaseByThisMonth</Value>
+                                <VisibleExpr>=$CaseByThisMonth&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox34">
+                                <Location>24px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>242, 197, 65</BackColor>
+                                </Style>
+                                <StyleName>HTitle</StyleName>
+                                <Value>本週新增案例</Value>
+                                <VisibleExpr>=$CaseByThisWeek&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox35">
+                                <Location>864px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>232, 62, 140</BackColor>
+                                </Style>
+                                <StyleName>HTitle</StyleName>
+                                <Value>案例總計</Value>
+                                <VisibleExpr>=$CaseCount&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox36">
+                                <Format>#,#0</Format>
+                                <Location>864px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>232, 62, 140</BackColor>
+                                </Style>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$CaseCount</Value>
+                                <VisibleExpr>=$CaseCount&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox37">
+                                <Location>696px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>232, 62, 140</BackColor>
+                                </Style>
+                                <StyleName>HTitle</StyleName>
+                                <Value>未結案數</Value>
+                                <VisibleExpr>=$OpenCaseCount&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox38">
+                                <Format>#,#0</Format>
+                                <Location>24px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <Style>
+                                    <BackColor>242, 197, 65</BackColor>
+                                </Style>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$CaseByThisWeek</Value>
+                                <VisibleExpr>=$CaseByThisWeek&gt;0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox39">
+                                <Location>8px, 96px</Location>
+                                <Size>264px, 24px</Size>
+                                <Style>
+                                    <Font>
+                                        <Name>Microsoft YaHei UI</Name>
+                                        <Size>12px</Size>
+                                        <Style>Bold</Style>
+                                    </Font>
+                                </Style>
+                                <Value>SUPPORT CASES LIST - Last 3 Months</Value>
+                            </TextBox>
+                            <TextBox Name="textBox4">
+                                <Location>192px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HTitle</StyleName>
+                                <Value>本月新增案例</Value>
+                                <VisibleExpr>=$CaseByThisMonth=0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox5">
+                                <Format>#,#0</Format>
+                                <Location>360px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$CloseByThisWeek</Value>
+                                <VisibleExpr>=$CloseByThisWeek=0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox6">
+                                <Location>360px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HTitle</StyleName>
+                                <Value>本週結案數</Value>
+                                <VisibleExpr>=$CloseByThisWeek=0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox7">
+                                <Format>#,#0</Format>
+                                <Location>528px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$CloseByThisMonth</Value>
+                                <VisibleExpr>=$CloseByThisMonth=0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox8">
+                                <Location>528px, 40px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HTitle</StyleName>
+                                <Value>本月結案數</Value>
+                                <VisibleExpr>=$CloseByThisMonth=0</VisibleExpr>
+                            </TextBox>
+                            <TextBox Name="textBox9">
+                                <Format>#,#0</Format>
+                                <Location>696px, 0px</Location>
+                                <ProcessOrder>Always</ProcessOrder>
+                                <Size>144px, 40px</Size>
+                                <StyleName>HCount</StyleName>
+                                <Value>=$OpenCaseCount</Value>
+                                <VisibleExpr>=$OpenCaseCount=0</VisibleExpr>
+                            </TextBox>
+                        </Items>
+                    </Header>
+                </Headers>
+                <Footers>
+                    <Footer Name="groupFooterSection1">
+                        <Height>0px</Height>
+                        <Visible>False</Visible>
+                    </Footer>
+                </Footers>
+            </Group>
+        </Groups>
     </Report>
 </Report>
