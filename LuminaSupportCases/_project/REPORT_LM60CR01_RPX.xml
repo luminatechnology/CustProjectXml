@@ -3,7 +3,7 @@
         <CommonSettings>
             <ViewPdf>True</ViewPdf>
         </CommonSettings>
-        <ExportFileName>Weekly Support Cases Update</ExportFileName>
+        <ExportFileName>Weekly Support Cases Summary</ExportFileName>
         <Filters>
             <FilterExp>
                 <DataField>BAccount.AcctCD</DataField>
@@ -21,16 +21,13 @@
             </ActivitySource>
             <Bcc>
             </Bcc>
-            <Body>
-            </Body>
-            <Cc>
-            </Cc>
+            <Body>Dear Customer,#010;#010;感謝您使用長弘科技Acumatica客戶支援服務。附件為本週議題回顧，若有任何問題，歡迎隨時與我們聯繫！#010;#010;Thanks for reaching out to Lumina Acumatica Support Center. Please see attached for the Weekly Support Summary. Should you have any questions, please feel free to contact us. Thank you very much!#010;#010;Best regards,#010;長弘科技有限公司#010;Lumina Technology Co., Ltd.#010;#010;*This message has been sent automatically, please do not reply.*</Body>
+            <Cc>yj.jiang@lumina-tech.com</Cc>
             <Format>
             </Format>
             <ParentSource>
             </ParentSource>
-            <Subject>
-            </Subject>
+            <Subject>Weekly Support Cases Summary</Subject>
             <TemplateID>
             </TemplateID>
             <To>=[BAccount.TOEMAIL_Attributes]</To>
@@ -53,6 +50,11 @@
             <ReportParameter>
                 <DefaultValue>=[@Today]</DefaultValue>
                 <Name>ThisDate</Name>
+            </ReportParameter>
+            <ReportParameter>
+                <DefaultValue>LUMINA</DefaultValue>
+                <Name>SysBranchCD</Name>
+                <Visible>False</Visible>
             </ReportParameter>
         </Parameters>
         <Relations>
@@ -95,6 +97,16 @@
                     </RelationRow>
                 </Links>
                 <ParentName>Contact</ParentName>
+            </ReportRelation>
+            <ReportRelation>
+                <ChildName>Branch</ChildName>
+                <Links>
+                    <RelationRow>
+                        <ChildField>BranchCD</ChildField>
+                        <ParentField>@SysBranchCD</ParentField>
+                    </RelationRow>
+                </Links>
+                <ParentName>CRCase</ParentName>
             </ReportRelation>
         </Relations>
         <SchemaUrl>https://www.acumatica.com.tw/Manuf/</SchemaUrl>
@@ -1134,6 +1146,116 @@
                 </Fields>
                 <FullName>PX.Objects.CR.BAccount</FullName>
             </ReportTable>
+            <ReportTable Name="Branch">
+                <Fields>
+                    <ReportField Name="AcctMapNbr">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="AcctName">
+                    </ReportField>
+                    <ReportField Name="Active">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="BAccountID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="BaseCuryID">
+                    </ReportField>
+                    <ReportField Name="BranchCD">
+                    </ReportField>
+                    <ReportField Name="BranchCD_Segment1">
+                    </ReportField>
+                    <ReportField Name="BranchID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="BranchOrOrganizationLogoNameReport">
+                    </ReportField>
+                    <ReportField Name="CarrierFacility">
+                    </ReportField>
+                    <ReportField Name="CEmail">
+                    </ReportField>
+                    <ReportField Name="CFSFiler">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="ContactName">
+                    </ReportField>
+                    <ReportField Name="CountryID">
+                    </ReportField>
+                    <ReportField Name="CountryID_Country_description">
+                    </ReportField>
+                    <ReportField Name="CountryID_description">
+                    </ReportField>
+                    <ReportField Name="CTelNumber">
+                    </ReportField>
+                    <ReportField Name="DefaultPrinterID">
+                        <DataType>Object</DataType>
+                    </ReportField>
+                    <ReportField Name="DefaultPrinterID_description">
+                    </ReportField>
+                    <ReportField Name="DefaultPrinterID_SMPrinter_printerName">
+                    </ReportField>
+                    <ReportField Name="ForeignEntity">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="GroupMask">
+                        <DataType>Object</DataType>
+                    </ReportField>
+                    <ReportField Name="Included">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="LedgerCD">
+                    </ReportField>
+                    <ReportField Name="LedgerID">
+                    </ReportField>
+                    <ReportField Name="LedgerID_description">
+                    </ReportField>
+                    <ReportField Name="LedgerID_Ledger_descr">
+                    </ReportField>
+                    <ReportField Name="LogoName">
+                    </ReportField>
+                    <ReportField Name="LogoNameReport">
+                    </ReportField>
+                    <ReportField Name="MainLogoName">
+                    </ReportField>
+                    <ReportField Name="NameControl">
+                    </ReportField>
+                    <ReportField Name="OrganizationID">
+                    </ReportField>
+                    <ReportField Name="OrganizationID_description">
+                    </ReportField>
+                    <ReportField Name="OrganizationID_Organization_organizationName">
+                    </ReportField>
+                    <ReportField Name="OrganizationID_Segment1">
+                    </ReportField>
+                    <ReportField Name="OrganizationLogoNameReport">
+                    </ReportField>
+                    <ReportField Name="OverrideThemeVariables">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="ParentBranchID">
+                        <DataType>Int32</DataType>
+                    </ReportField>
+                    <ReportField Name="PhoneMask">
+                    </ReportField>
+                    <ReportField Name="Reporting1099">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="RoleName">
+                    </ReportField>
+                    <ReportField Name="RoleName_description">
+                    </ReportField>
+                    <ReportField Name="RoleName_Roles_descr">
+                    </ReportField>
+                    <ReportField Name="Secured">
+                        <DataType>Boolean</DataType>
+                    </ReportField>
+                    <ReportField Name="TCC">
+                    </ReportField>
+                    <ReportField Name="tstamp">
+                    </ReportField>
+                </Fields>
+                <FullName>PX.Objects.GL.Branch</FullName>
+            </ReportTable>
         </Tables>
         <Version>20211215</Version>
         <Sections>
@@ -1223,7 +1345,7 @@
                 </Items>
             </Detail>
             <ReportHeader Name="reportHeaderSection1">
-                <Height>1.90476cm</Height>
+                <Height>2.1164cm</Height>
                 <Items>
                     <TextBox Name="textBox41">
                         <Location>320px, 0px</Location>
@@ -1240,10 +1362,21 @@
                 </Items>
             </ReportHeader>
             <PageHeader Name="pageHeaderSection1">
-                <Height>0.42328cm</Height>
+                <Height>0.84656cm</Height>
                 <Items>
+                    <PictureBox Name="pictureBox1">
+                        <Location>0px, 0px</Location>
+                        <MimeType>image/png</MimeType>
+                        <QRCodeSettings />
+                        <Size>64px, 26px</Size>
+                        <Source>Database</Source>
+                        <Style>
+                            <TextAlign>Center</TextAlign>
+                        </Style>
+                        <Value>=[Branch.BranchOrOrganizationLogoNameReport]</Value>
+                    </PictureBox>
                     <TextBox Name="textBox40">
-                        <Location>920px, 0px</Location>
+                        <Location>904px, 0px</Location>
                         <Size>104px, 16px</Size>
                         <Style>
                             <TextAlign>Right</TextAlign>
