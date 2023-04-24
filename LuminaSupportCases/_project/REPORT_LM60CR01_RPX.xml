@@ -19,15 +19,10 @@
         <MailSettings>
             <ActivitySource>
             </ActivitySource>
-            <Bcc>
-            </Bcc>
-            <Body>Dear Customer,#010;#010;感謝您使用長弘科技Acumatica客戶支援服務。附件為本週議題回顧，若有任何問題，歡迎隨時與我們聯繫！#010;#010;Thanks for reaching out to Lumina Acumatica Support Center. Please see attached for the Weekly Support Summary. Should you have any questions, please feel free to contact us. Thank you very much!#010;#010;Best regards,#010;長弘科技有限公司#010;Lumina Technology Co., Ltd.#010;#010;*This message has been sent automatically, please do not reply.*</Body>
-            <Cc>yj.jiang@lumina-tech.com</Cc>
+            <Bcc>yj.jiang@lumina-tech.com</Bcc>
             <Format>
             </Format>
-            <ParentSource>
-            </ParentSource>
-            <Subject>Weekly Support Cases Summary</Subject>
+            <ParentSource>BAccount.NoteID</ParentSource>
             <TemplateID>
             </TemplateID>
             <To>=[BAccount.TOEMAIL_Attributes]</To>
@@ -43,12 +38,12 @@
                 <ViewName>=Report.GetFieldSchema('BAccount.AcctCD')</ViewName>
             </ReportParameter>
             <ReportParameter>
-                <DefaultValue>= CDate( Format('{0:yyyy-MM}-01', DateAdd( [@Today], 'M', -2 ) ) )</DefaultValue>
+                <DefaultValue>= CDate( Format('{0:yyyy-MM}-01', DateAdd(Report.GetDefExt('BAccount.CreatedDateTime'), 'M', -2 ) ) )</DefaultValue>
                 <Name>First3Month</Name>
                 <Type>DateTime</Type>
             </ReportParameter>
             <ReportParameter>
-                <DefaultValue>=[@Today]</DefaultValue>
+                <DefaultValue>=Report.GetDefExt('BAccount.CreatedDateTime')/*[@Today]*/</DefaultValue>
                 <Name>ThisDate</Name>
             </ReportParameter>
             <ReportParameter>
@@ -1347,6 +1342,17 @@
             <ReportHeader Name="reportHeaderSection1">
                 <Height>2.1164cm</Height>
                 <Items>
+                    <PictureBox Name="pictureBox1">
+                        <Location>24px, 8px</Location>
+                        <MimeType>image/png</MimeType>
+                        <QRCodeSettings />
+                        <Size>152px, 56px</Size>
+                        <Source>Database</Source>
+                        <Style>
+                            <TextAlign>Center</TextAlign>
+                        </Style>
+                        <Value>=[Branch.BranchOrOrganizationLogoNameReport]</Value>
+                    </PictureBox>
                     <TextBox Name="textBox41">
                         <Location>320px, 0px</Location>
                         <Size>392px, 32px</Size>
@@ -1364,17 +1370,6 @@
             <PageHeader Name="pageHeaderSection1">
                 <Height>0.84656cm</Height>
                 <Items>
-                    <PictureBox Name="pictureBox1">
-                        <Location>0px, 0px</Location>
-                        <MimeType>image/png</MimeType>
-                        <QRCodeSettings />
-                        <Size>64px, 26px</Size>
-                        <Source>Database</Source>
-                        <Style>
-                            <TextAlign>Center</TextAlign>
-                        </Style>
-                        <Value>=[Branch.BranchOrOrganizationLogoNameReport]</Value>
-                    </PictureBox>
                     <TextBox Name="textBox40">
                         <Location>904px, 0px</Location>
                         <Size>104px, 16px</Size>
